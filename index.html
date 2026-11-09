@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLOBAL DEAL HUNTER｜全球羊毛情报中心</title>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--mut:#8b949e;--acc:#f0883e;--grn:#3fb950;--red:#f85149;--blu:#58a6ff;--yel:#d29922}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.55}
+header{padding:28px 16px 8px;text-align:center}
+h1{font-size:24px;letter-spacing:.5px}
+h1 .en{color:var(--acc)}
+.sub{color:var(--mut);font-size:13px;margin-top:6px}
+.bar{max-width:1060px;margin:14px auto;padding:0 14px;display:flex;gap:8px;flex-wrap:wrap}
+.bar input{flex:1;min-width:200px;background:var(--card);border:1px solid var(--line);border-radius:8px;color:var(--txt);padding:9px 12px;font-size:14px}
+nav{max-width:1060px;margin:0 auto;padding:0 14px;display:flex;gap:6px;flex-wrap:wrap}
+nav a{color:var(--mut);text-decoration:none;font-size:13px;border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+nav a:hover{color:var(--txt);border-color:var(--acc)}
+main{max-width:1060px;margin:0 auto;padding:8px 14px 40px}
+section{margin-top:26px}
+h2{font-size:17px;border-left:4px solid var(--acc);padding-left:9px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.card h3{font-size:15px;margin-bottom:6px}
+.badges{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
+.b{font-size:11px;padding:1px 7px;border-radius:999px;border:1px solid var(--line);color:var(--mut)}
+.b.free{color:var(--grn);border-color:var(--grn)} .b.trial{color:var(--blu);border-color:var(--blu)}
+.b.lot{color:var(--yel);border-color:var(--yel)} .b.card{color:var(--acc);border-color:var(--acc)}
+.b.ok{color:var(--grn)} .b.unv{color:var(--red);border-color:var(--red)} .b.end{color:var(--mut)}
+.sum{font-size:13px;color:var(--txt)}
+.kv{font-size:12px;color:var(--mut);margin-top:7px}
+.kv b{color:var(--txt);font-weight:600}
+.risk{font-size:12px;color:var(--yel);margin-top:7px}
+.btn{display:inline-block;margin-top:10px;color:#fff;background:#b3541e;padding:5px 12px;border-radius:7px;text-decoration:none;font-size:13px}
+.empty{color:var(--mut);font-size:13px;border:1px dashed var(--line);border-radius:10px;padding:16px;text-align:center}
+footer{color:var(--mut);font-size:12px;text-align:center;padding:0 14px 30px}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<header>
+<h1><span class="en">GLOBAL DEAL HUNTER</span>｜全球羊毛情报中心</h1>
+<div class="sub">全球优惠 · 免费资源 · 限时活动情报｜每条均标注来源与最后验证时间，未核实的明确标「待核实」｜数据快照：2026-11-10</div>
+</header>
+<div class="bar"><input id="q" type="search" placeholder="搜索优惠名称或内容…"></div>
+<nav>
+<a href="#latest">今日最新</a><a href="#rank">高价值排行榜</a><a href="#ai">AI工具专区</a><a href="#crypto">Crypto专区</a><a href="#bank">海外银行与卡</a><a href="#vps">VPS及云服务</a><a href="#ending">即将截止</a><a href="#archive">已结束档案</a>
+</nav>
+<main id="app"></main>
+<footer>本站信息来自公开来源并经人工/AI 核实，参与前请以官方页面为准；标注「待核实」的条目请勿据此付款。抽奖、空投类活动请注意风险，切勿为参与付费。</footer>
+<script>
+const DEALS = [{"category": "vps", "conditions": "注册账号即可；超出免费资源阈值后整个工作区按付费计费", "deadline": null, "deal_type": "真免费", "last_verified_at": "2026-11-06", "official_url": "https://cloady.com", "region": "可选美西 usw1 等区域", "risk_note": "官方论坛曾称免费层暂时暂停、新条款疑似只免费一个月，2026-12-06 为观察点", "source_name": "Cloady 官网", "status": "有效", "steps": "打开官网注册账号 → 创建工作区 → 在免费额度内创建应用", "summary": "0.5 vCPU / 1 GB 内存 / 5 GB 磁盘，每月 10 GB 出站流量，常驻不休眠。$0/月，无需绑卡。", "title": "Cloady 免费档", "value_score": null, "value_text": "$0/月（免费档）", "verification_status": "已核实"}, {"category": "vps", "conditions": "注册账号即可；每天 500 CPU 秒上限", "deadline": null, "deal_type": "真免费", "last_verified_at": "2026-11-10", "official_url": "https://portal.uppcoder.com/pricing", "region": "服务器在德国（Hetzner 机房）", "risk_note": "平台 2026 年 11 月刚上线，长期稳定性未知", "source_name": "Uppcoder 官方定价页", "status": "有效", "steps": "打开定价页注册 → 邮箱验证 → 开通 Spark 免费档创建应用", "summary": "1 个常驻应用 + 1 个数据库，2 GB 内存 / 2 GB 磁盘，每天 500 CPU 秒上限，带 SSH（2222 端口）和 HTTPS 地址。€0 永久免费，免绑卡，官方承诺取消前 60 天邮件通知。", "title": "Uppcoder Spark 免费档", "value_score": null, "value_text": "€0（永久免费档）", "verification_status": "已核实"}, {"category": "vps", "conditions": "需抢到免费名额（当前售罄）", "deadline": null, "deal_type": "免费试用", "last_verified_at": "2026-11-09", "official_url": "https://natbox.io", "region": "德国", "risk_note": "名额恢复时间不定，放出后几分钟即被抢空", "source_name": "NatBox 官网", "status": "名额已满", "steps": "打开官网注册 → 等待免费名额放出后领取试用", "summary": "256 MB 内存 / 3 GB SSD / 5 个 IPv4 转发端口 / IPv6 /80 / 100 GB 流量。免费试用 1 个月，免绑卡，不自动续费。", "title": "NatBox 免费试用", "value_score": null, "value_text": "免费试用 1 个月", "verification_status": "已核实"}, {"category": "vps", "conditions": "注册需人工审核；每 3 个月至少登录一次保号", "deadline": null, "deal_type": "真免费", "last_verified_at": "2026-11-06", "official_url": "https://www.serv00.com", "region": "全球可注册", "risk_note": "申请审核通常数小时至数天；超 3 个月未登录账号会被回收", "source_name": "serv00 官网", "status": "有效", "steps": "打开官网提交注册申请 → 等待人工审核邮件 → 按邮件指引开通", "summary": "512 MB 内存 / 3 GB 磁盘 / 3 个自留端口，官方称流量不限（公平使用原则）。", "title": "serv00 免费主机", "value_score": null, "value_text": "免费（需人工审核）", "verification_status": "已核实"}, {"category": "vps", "conditions": "需银行卡验证；账单地址必须与发卡行登记一致", "deadline": null, "deal_type": "需绑卡验证", "last_verified_at": "2026-11-06", "official_url": "https://www.oracle.com/cloud/free/", "region": "全球多区域（注册时选定 home region 后不可更改）", "risk_note": "注册风控严格，账单地址必须与发卡行登记一致，否则创建失败", "source_name": "Oracle Cloud 官网", "status": "有效", "steps": "打开官网注册 → 邮箱验证 → 银行卡验证 → 创建 Always Free ARM 实例", "summary": "ARM 实例 2 OCPU / 12 GB 内存（2026-06-15 起由 4 OCPU / 24 GB 减半），每月 10 TB 出站流量。永久免费，但注册需银行卡验证。", "title": "Oracle Cloud Always Free", "value_score": null, "value_text": "永久免费（需绑卡验证）", "verification_status": "已核实"}, {"category": "ai", "conditions": "注册账号并创建 API Key；Key 30 天到期需重新生成", "deadline": null, "deal_type": "真免费", "last_verified_at": "2026-11-09", "official_url": "https://docs.exaone.ai", "region": "全球", "risk_note": "免费额度具体数额官方未公布；模型不支持中文", "source_name": "EXAONE 官方文档", "status": "有效", "steps": "打开文档站注册 → 创建 API Key → 按 OpenAI 兼容格式调用", "summary": "注册送免费额度（具体数额官方未公布）。模型 k-exaone_v2.5，仅韩语/英语，文本，512K 上下文；API Key 有效期 30 天。", "title": "EXAONE API 免费额度", "value_score": null, "value_text": "待核实", "verification_status": "已核实"}, {"category": "ai", "conditions": "需先完成手机/身份验证才能使用 GPU 笔记本", "deadline": null, "deal_type": "真免费", "last_verified_at": "2026-11-09", "official_url": "https://www.kaggle.com", "region": "全球", "risk_note": "未完成验证前无法使用 GPU 笔记本", "source_name": "Kaggle 官网", "status": "有效", "steps": "注册 Kaggle → 完成手机/身份验证 → 新建 Notebook 并开启 GPU", "summary": "T4 x2（单卡 16 GB 显存），每周约 30 GPU 小时，单次会话最长 12 小时。", "title": "Kaggle 免费 GPU", "value_score": null, "value_text": "免费 GPU 算力（每周约 30 小时）", "verification_status": "已核实"}, {"category": "ai", "conditions": "需要 Google 账号", "deadline": null, "deal_type": "真免费", "last_verified_at": "2026-11-09", "official_url": "https://colab.research.google.com", "region": "全球（部分地区受限）", "risk_note": "闲置断开后环境重置，重要文件请及时保存到 Drive", "source_name": "Google Colab 官网", "status": "有效", "steps": "用 Google 账号打开 Colab → 新建笔记本 → 运行时类型选 GPU", "summary": "免费 T4 GPU（约 15 GB 显存），会话制，闲置会断开并重置环境。", "title": "Google Colab 免费 GPU", "value_score": null, "value_text": "免费 GPU 算力（会话制）", "verification_status": "已核实"}, {"category": "ai", "conditions": "官方称限前 10000 名", "deadline": null, "deal_type": "真免费", "last_verified_at": "2026-11-09", "official_url": "https://box.simular.ai", "region": "全球", "risk_note": "官方称限前 10000 名，是否永久免费未知；无公网 IP 不能当服务器节点", "source_name": "Simular Box 官网", "status": "有效", "steps": "打开官网注册 → 领取免费云电脑", "summary": "约 4 核 / 8 GB 云端 Ubuntu 桌面，每天 1000 credits，闲置休眠、无公网 IP。限量发放。", "title": "Simular Box 免费云电脑", "value_score": null, "value_text": "免费（限量）", "verification_status": "已核实"}, {"category": "ai", "conditions": "注册并创建 API Key", "deadline": null, "deal_type": "真免费", "last_verified_at": "2026-11-09", "official_url": "https://openrouter.ai", "region": "全球", "risk_note": "免费模型有速率与额度限制，列表每日变化", "source_name": "OpenRouter 官网", "status": "有效", "steps": "注册 OpenRouter → 创建 API Key → 选择带 :free 后缀的模型调用", "summary": "多个带 :free 后缀的模型可免费调用，免费模型列表每日变化。需注册并创建 API Key。", "title": "OpenRouter 免费模型", "value_score": null, "value_text": "免费模型调用额度（列表每日变化）", "verification_status": "已核实"}, {"category": "vps", "conditions": "按 LowEndBox 活动页规则参与抽奖", "deadline": "2026-11-30", "deal_type": "抽奖", "last_verified_at": "2026-11-09", "official_url": "https://lowendbox.com", "region": "全球", "risk_note": "抽奖类活动，中奖概率不确定，切勿为抽奖付费", "source_name": "LowEndBox", "status": "有效", "steps": "打开 LowEndBox 活动页 → 按页面规则参与", "summary": "奖品含 5 台首年免费 KVM VPS（3 vCPU / 4 GB / 60 GB）和 10 份 $50 额度。抽奖活动，非人人有份。", "title": "RackNerd Fall Giveaway", "value_score": 50, "value_text": "最高：首年免费 VPS 或 $50 额度", "verification_status": "已核实"}, {"category": "ai", "conditions": "待核实", "deadline": null, "deal_type": "待核实", "last_verified_at": null, "official_url": "https://www.f6s.com", "region": "待核实", "risk_note": "未经官方页面核实，不要据此付款", "source_name": "F6S 推广邮件（2026-10-31）", "status": "有效", "steps": "待核实——请勿直接付款，先等官方页面确认", "summary": "推广邮件称买 1 个 ChatGPT Business 席位送 1 个，$1,200 管 4 年。仅来自 F6S 2026-10-31 推广邮件，未在官方页面核实。", "title": "F6S：ChatGPT Business 买一送一", "value_score": null, "value_text": "待核实", "verification_status": "待核实"}, {"category": "vps", "conditions": "已结束", "deadline": null, "deal_type": "真免费", "last_verified_at": "2026-11-09", "official_url": "https://lowendbox.com", "region": "全球", "risk_note": "已结束，仅作档案保留", "source_name": "LowEndTalk / LowEndBox", "status": "已结束", "steps": "已结束，无需参与", "summary": "150 台一年免费 VPS（3 vCPU / 4 GB / 60 GB）。2026-11-09 核实已全部送完。", "title": "RackNerd × AdminBolt 免费 VPS 赠送", "value_score": null, "value_text": "一年免费 VPS（已送完）", "verification_status": "已核实"}];
+const CATNAME = {ai:"AI工具", vps:"VPS及云服务", crypto:"Crypto", bank:"海外银行与卡", software:"软件与数字服务"};
+function esc(s){return (s==null?"":String(s)).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function typeCls(t){return t==="真免费"?"free":t==="免费试用"?"trial":t==="抽奖"?"lot":t==="需绑卡验证"?"card":""}
+function card(d){
+  const dl = d.deadline ? `<div class="kv">截止：<b>${esc(d.deadline)}</b></div>` : "";
+  const ver = d.verification_status==="已核实" ? `<span class="b ok">已核实 ${esc(d.last_verified_at||"")}</span>` : `<span class="b unv">待核实</span>`;
+  const st = d.status==="已结束" ? `<span class="b end">已结束</span>` : (d.status && d.status!=="有效" ? `<span class="b lot">${esc(d.status)}</span>` : "");
+  return `<div class="card" data-text="${esc((d.title+" "+d.summary+" "+(CATNAME[d.category]||"")).toLowerCase())}">
+  <h3>${esc(d.title)}</h3>
+  <div class="badges"><span class="b">${esc(CATNAME[d.category]||d.category)}</span><span class="b ${typeCls(d.deal_type)}">${esc(d.deal_type)}</span>${ver}${st}</div>
+  <div class="sum">${esc(d.summary)}</div>
+  <div class="kv">价值：<b>${esc(d.value_text)}</b></div>
+  <div class="kv">地区：${esc(d.region)}｜条件：${esc(d.conditions)}</div>
+  ${dl}
+  <div class="kv">步骤：${esc(d.steps)}</div>
+  <div class="kv">来源：${esc(d.source_name)}</div>
+  <div class="risk">风险提示：${esc(d.risk_note)}</div>
+  <a class="btn" href="${esc(d.official_url)}" target="_blank" rel="noopener">官方链接</a></div>`;
+}
+function section(id, title, list, emptyText){
+  const body = list.length ? `<div class="grid">${list.map(card).join("")}</div>` : `<div class="empty">${emptyText}</div>`;
+  return `<section id="${id}"><h2>${title}</h2>${body}</section>`;
+}
+function render(){
+  const active = DEALS.filter(d=>d.status!=="已结束");
+  const byVer = (a,b)=> (b.last_verified_at||"") < (a.last_verified_at||"") ? -1 : 1;
+  const latest = [...active].sort(byVer);
+  const rank = [...active].sort((a,b)=> ((b.value_score||0)-(a.value_score||0)) || byVer(a,b));
+  const ending = active.filter(d=>d.deadline);
+  const arch = DEALS.filter(d=>d.status==="已结束");
+  document.getElementById("app").innerHTML =
+    section("latest","A · 今日最新优惠", latest, "暂无条目") +
+    section("rank","B · 高价值优惠排行榜", rank, "暂无条目") +
+    section("ai","C · AI工具免费与折扣专区", active.filter(d=>d.category==="ai"), "暂无已核实条目，自动巡检中") +
+    section("crypto","D · Crypto空投与积分专区", active.filter(d=>d.category==="crypto"), "暂无已核实条目，自动巡检中") +
+    section("bank","E · 海外银行与银行卡优惠", active.filter(d=>d.category==="bank"), "暂无已核实条目，自动巡检中") +
+    section("vps","F · VPS及云服务专区", active.filter(d=>d.category==="vps"), "暂无已核实条目，自动巡检中") +
+    section("ending","G · 即将截止的活动", ending, "暂无带明确截止日期的活动") +
+    section("archive","H · 已结束活动档案", arch, "暂无已结束条目");
+}
+render();
+document.getElementById("q").addEventListener("input", e=>{
+  const q = e.target.value.trim().toLowerCase();
+  document.querySelectorAll(".card").forEach(c=>{ c.classList.toggle("hidden", q && !c.dataset.text.includes(q)); });
+});
+</script>
+</body>
+</html>
